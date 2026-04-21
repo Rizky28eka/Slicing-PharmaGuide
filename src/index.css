@@ -1,0 +1,198 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ═══════════════════════════════════════════════════════
+   MANAJEMEN FARMASI — Ultra-Modern 2025 Design System
+   Near-black + Crisp white + Emerald green accent
+   ═══════════════════════════════════════════════════════ */
+
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap');
+
+@layer base {
+  :root {
+    /* ── Core ── */
+    --background:       0 0% 99%;
+    --foreground:       0 0% 4%;
+    --card:             0 0% 100%;
+    --card-foreground:  0 0% 4%;
+    --popover:          0 0% 100%;
+    --popover-foreground: 0 0% 4%;
+    --primary:          0 72% 44%;
+    --primary-foreground: 0 0% 100%;
+    --secondary:        0 0% 96%;
+    --secondary-foreground: 0 0% 10%;
+    --muted:            0 0% 96%;
+    --muted-foreground: 0 0% 45%;
+    --accent:           0 72% 44%;
+    --accent-foreground: 0 0% 100%;
+    --destructive:      0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border:           0 0% 90%;
+    --input:            0 0% 90%;
+    --ring:             0 72% 44%;
+    --radius:           0.75rem;
+
+    /* ── Brand tokens ── */
+    --ink:           4 4% 4%;         /* near-black #0a0a09 */
+    --ink-soft:      0 0% 42%;        /* gray text */
+    --paper:         60 9% 97%;       /* warm white sections */
+    --em:            0 72% 44%;     /* red #dc2626 */
+    --em-bright:     0 70% 55%;     /* brighter red */
+    --em-soft:       0 70% 96%;     /* very light red tint */
+    --dark:          0 0% 4%;         /* near-black sections */
+    --dark-card:     0 0% 8%;         /* dark card bg */
+    --dark-border:   0 0% 14%;        /* dark border */
+
+    /* ── Static colors used inline ── */
+    --c-ink:    #0a0908;
+    --c-em:     #dc2626;
+    --c-paper:  #f7f7f4;
+
+    /* ── Gradients ── */
+    --gradient-page:   linear-gradient(180deg, #ffffff 0%, #f7f7f4 100%);
+    --gradient-hero:   linear-gradient(160deg, #080808 0%, #111111 100%);
+    --gradient-em:     linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+    --gradient-card:   linear-gradient(180deg, #ffffff 0%, #f9f9f7 100%);
+    --gradient-glass:  linear-gradient(135deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.02) 100%);
+    --gradient-promo:  linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
+    --gradient-dark:   linear-gradient(135deg, #0d0d0d 0%, #111111 100%);
+    --gradient-gold:   linear-gradient(135deg, #d97706 0%, #b45309 100%);
+    --gradient-emerald: var(--gradient-em);
+
+    /* ── Shadows ── */
+    --shadow-card:  0 1px 0 rgba(0,0,0,0.04), 0 4px 16px rgba(0,0,0,0.06), 0 16px 48px rgba(0,0,0,0.06);
+    --shadow-lift:  0 2px 4px rgba(0,0,0,0.04), 0 12px 40px rgba(0,0,0,0.12);
+    --shadow-glow:  0 0 30px rgba(220,38,38,0.25);
+    --shadow-pill:  0 1px 2px rgba(0,0,0,0.06);
+  }
+}
+
+@layer base {
+  * { @apply border-border; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    @apply antialiased;
+    background: #ffffff;
+    color: var(--c-ink);
+    font-family: 'DM Sans', ui-sans-serif, system-ui, sans-serif;
+    font-size: 15px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4, h5 {
+    font-family: 'Syne', ui-sans-serif, system-ui, sans-serif;
+    letter-spacing: -0.03em;
+    line-height: 1.08;
+  }
+}
+
+@layer components {
+  /* ── Section label ── */
+  .pill {
+    @apply inline-flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-[0.2em];
+    color: var(--c-em);
+  }
+  .pill-dark {
+    @apply inline-flex items-center gap-1.5 rounded-full border px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.15em];
+    border-color: rgba(255,255,255,0.12);
+    color: rgba(255,255,255,0.5);
+  }
+
+  /* ── Card variants ── */
+  .card-soft {
+    background: #ffffff;
+    border: 1px solid rgba(0,0,0,0.06);
+    border-radius: 16px;
+    box-shadow: var(--shadow-card);
+  }
+  .card-dark {
+    background: #111111;
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 16px;
+  }
+  .glass-card {
+    background: var(--gradient-glass);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 16px;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
+
+  /* ── Bento card ── */
+  .bento {
+    @apply relative overflow-hidden rounded-2xl border;
+    border-color: rgba(0,0,0,0.06);
+    background: #fdfdfc;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+  }
+  .bento:hover {
+    box-shadow: var(--shadow-lift);
+    transform: translateY(-2px);
+  }
+  .bento-dark {
+    @apply relative overflow-hidden rounded-2xl border;
+    border-color: rgba(255,255,255,0.06);
+    background: #111111;
+  }
+
+  /* ── Number badge ── */
+  .num-badge {
+    font-family: 'Syne', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: var(--c-em);
+  }
+
+  /* ── Gradient text ── */
+  .text-em {
+    background: var(--gradient-em);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Tag chip */
+  .chip {
+    @apply inline-flex items-center rounded-full px-3 py-1 text-[11px] font-semibold;
+    background: var(--c-em);
+    color: #ffffff;
+  }
+  .chip-outline {
+    @apply inline-flex items-center rounded-full border px-3 py-1 text-[11px] font-semibold;
+    border-color: rgba(255,255,255,0.15);
+    color: rgba(255,255,255,0.6);
+  }
+
+  /* ── Animations ── */
+  @keyframes fade-up {
+    from { opacity: 0; transform: translateY(16px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes scale-in {
+    from { opacity: 0; transform: scale(0.97); }
+    to   { opacity: 1; transform: scale(1); }
+  }
+  @keyframes slide-right {
+    from { transform: translateX(-100%); }
+    to   { transform: translateX(0); }
+  }
+
+  .anim-fade-up   { animation: fade-up 0.6s ease forwards; }
+  .anim-scale-in  { animation: scale-in 0.5s ease forwards; }
+
+  /* Hover underline effect */
+  .hover-line {
+    @apply relative inline-block;
+  }
+  .hover-line::after {
+    content: '';
+    @apply absolute bottom-0 left-0 h-px w-0 transition-all duration-300;
+    background: var(--c-em);
+  }
+  .hover-line:hover::after { width: 100%; }
+}
