@@ -1,32 +1,32 @@
-# 💊 Manajemen Farmasi - Digital Reference
+# 💊 Pharmacy Management - Digital Reference
 
-Sebuah platform referensi digital komprehensif yang memadukan aspek manajerial dan klinis farmasi. Dirancang khusus untuk membantu mahasiswa dan praktisi farmasi memahami alur kerja apotek secara mendalam, mulai dari perencanaan hingga monitoring pasien.
+A comprehensive digital reference platform that merges the managerial and clinical aspects of pharmacy. Specifically designed to help students and practitioners understand the pharmacy workflow in-depth, from planning to patient monitoring.
 
 ---
 
 ## 📌 1. Project Title & Description
 
-* **Nama Project**: Manajemen Farmasi Landing Page
-* **Deskripsi**: Website edukasi yang menyajikan referensi komprehensif mengenai tata kelola farmasi, menggabungkan teori manajerial dengan praktik klinis di lingkungan apotek.
-* **Tujuan**: Menyediakan sumber belajar yang interaktif dan mudah dipahami bagi calon apoteker dan tenaga teknis kefarmasian mengenai sistem manajemen apotek modern.
+* **Project Name**: Pharmacy Management Landing Page
+* **Description**: An educational website providing a comprehensive reference for pharmacy management, combining managerial theory with clinical practice in a pharmacy setting.
+* **Objective**: To provide an interactive and easy-to-understand learning resource for prospective pharmacists and pharmacy technicians regarding modern pharmacy management systems.
 
 ---
 
 ## 📌 2. Overview / Background
 
-* **Latar Belakang**: Pengelolaan apotek melibatkan banyak aspek yang kompleks, mulai dari regulasi, logistik, hingga pelayanan klinis. Seringkali, materi ini sulit dipahami tanpa visualisasi alur yang sistematis.
-* **Kenapa Project Ini Dibuat**: Untuk menjembatani kesenjangan antara teori akademik dan implementasi praktis di lapangan dengan cara yang lebih visual dan modern.
-* **Solusi**: Menghadirkan dashboard informasi yang ringkas, modul pengayaan yang terstruktur, dan visualisasi "9 Langkah Alur Manajemen Farmasi" yang interaktif.
+* **Background**: Managing a pharmacy involves many complex aspects, ranging from regulations and logistics to clinical services. Often, these materials are difficult to grasp without systematic flow visualization.
+* **Rationale**: This project was created to bridge the gap between academic theory and practical implementation in the field through a more visual and modern approach.
+* **Solution**: Features a concise information dashboard, structured enrichment modules, and an interactive visualization of the "9-Step Pharmacy Management Flow."
 
 ---
 
-## 📌 3. Features (Fitur Utama)
+## 📌 3. Features
 
-* **Dashboard Statistik**: Ringkasan data (14 Bab Materi, 8 Modul Praktik, 2024 Tahun Terbit).
-* **Alur Manajemen Interaktif**: Visualisasi 9 langkah proses inti di apotek (Selection -> Planning -> ... -> Monitoring).
-* **Materi Tambahan Komprehensif**: 8 modul pengayaan (Evaluasi Resep, Analisis Finansial, Regulasi, dll).
-* **Responsive UI**: Desain premium yang optimal di semua ukuran layar (Mobile, Tablet, Desktop).
-* **Smooth Navigation**: Navigasi berbasis anchor untuk perpindahan antar section yang mulus.
+* **Statistics Dashboard**: Data summary (14 Course Chapters, 8 Practical Modules, 2024 Publication Year).
+* **Interactive Management Flow**: Visualization of the 9 core process steps in a pharmacy (Selection -> Planning -> ... -> Monitoring).
+* **Comprehensive Enrichment Materials**: 8 additional modules (Prescription Evaluation, Financial Analysis, Regulation, etc.).
+* **Responsive UI**: Premium design optimized for all screen sizes (Mobile, Tablet, Desktop).
+* **Smooth Navigation**: Anchor-based navigation for seamless transitions between sections.
 
 ---
 
@@ -43,38 +43,48 @@ Sebuah platform referensi digital komprehensif yang memadukan aspek manajerial d
 
 ## 📌 5. System Architecture
 
-* **Arsitektur**: Single Page Application (SPA).
-* **Struktur**: Component-based Architecture dengan pemisahan antara `UI Components` (reusable) dan `Site Components` (section-specific).
-* **Styling Pattern**: Utility-first CSS menggunakan Tailwind dengan integrasi CSS Variables untuk tema warna.
+* **Architecture**: Single Page Application (SPA).
+* **Structure**: Component-based Architecture separating `UI Components` (reusable) and `Site Components` (section-specific).
+* **Styling Pattern**: Utility-first CSS using Tailwind with CSS Variables integration for color themes.
 
 ---
 
 ## 📌 6. Installation Guide
 
 ### Requirements
-* Node.js v18.x atau lebih baru
-* Bun (direkomendasikan) atau NPM
+
+* Node.js v18.x or later
+* Bun (recommended) or NPM
 
 ### Step-by-step
+
 1. **Clone Repository**
+
    ```bash
    git clone https://github.com/Rizky28eka/ui-slicing-guru.git
    ```
+
 2. **Install Dependencies**
+
    ```bash
    bun install
-   # atau
+   # or
    npm install
    ```
+
 3. **Setup Environment**
-   *(Opsional: Jika ada file .env.example, salin ke .env)*
+
+   *(Optional: If there is a .env.example file, copy it to .env)*
+
    ```bash
    cp .env.example .env
    ```
+
 4. **Run Project**
+
    ```bash
    bun dev
-   # atau
+   # or
    npm run dev
    ```
 
@@ -82,26 +92,19 @@ Sebuah platform referensi digital komprehensif yang memadukan aspek manajerial d
 
 ## 📌 7. Usage
 
-* **Eksplorasi Materi**: User dapat melihat statistik utama di section Hero.
-* **Mempelajari Alur**: Scroll ke section "Alur Manajemen" untuk melihat urutan kerja profesional di apotek.
-* **Materi Pengayaan**: Klik pada kartu materi di section "Materi Tambahan" untuk melihat detail topik.
+* **Explore Materials**: Users can view key statistics in the Hero section.
+* **Study the Flow**: Scroll to the "Management Flow" section to see the professional workflow sequence in a pharmacy.
+* **Enrichment Modules**: Click on material cards in the "Additional Materials" section to view topic details.
 
 ---
 
 ## 📌 8. API Documentation
 
-* *Saat ini project ini adalah frontend-only (static landing page). Integrasi API direncanakan pada roadmap masa depan.*
+* *Currently, this project is frontend-only (static landing page). API integration is planned for the future roadmap.*
 
 ---
 
-## 📌 9. Screenshots / Demo
-
-![Preview Landing Page](./image.png)
-*(Ganti dengan path screenshot terbaru jika tersedia)*
-
----
-
-## 📌 10. Folder Structure
+## 📌 9. Folder Structure
 
 ```text
 ├── public/                # Static assets (images, icons)
@@ -119,36 +122,35 @@ Sebuah platform referensi digital komprehensif yang memadukan aspek manajerial d
 
 ---
 
-## 📌 11. Roadmap / Future Development
+## 📌 10. Roadmap / Future Development
 
-* [ ] **Detail Materi**: Menambahkan halaman detail untuk ke-14 bab materi.
-* [ ] **Interactive Quiz**: Fitur evaluasi mandiri untuk setiap modul praktik.
-* [ ] **Dark Mode**: Dukungan tema gelap untuk kenyamanan membaca di malam hari.
-* [ ] **Backend Integration**: Integrasi dengan CMS untuk manajemen konten dinamis.
-
----
-
-## 📌 12. Contributing
-
-1. Fork Project ini.
-2. Buat Feature Branch (`git checkout -b feature/AmazingFeature`).
-3. Commit perubahan Anda (`git commit -m 'Add some AmazingFeature'`).
-4. Push ke Branch (`git push origin feature/AmazingFeature`).
-5. Buka Pull Request.
+* [ ] **Detailed Content**: Adding detail pages for each of the 14 chapters.
+* [ ] **Interactive Quiz**: Self-evaluation feature for each practical module.
+* [ ] **Dark Mode**: Support for dark theme for reading comfort.
+* [ ] **Backend Integration**: Integration with a CMS for dynamic content management.
 
 ---
 
-## 📌 13. License
+## 📌 11. Contributing
 
-Distributed under the **MIT License**. Lihat `LICENSE` untuk informasi lebih lanjut.
+1. Fork this Project.
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`).
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`).
+4. Push to the Branch (`git push origin feature/AmazingFeature`).
+5. Open a Pull Request.
 
 ---
 
-## 📌 14. Author / Credits
+## 📌 12. License
+
+Distributed under the **MIT License**. See `LICENSE` for more information.
+
+---
+
+## 📌 13. Author / Credits
 
 * **Rizky Eka** - *Lead Developer* - [@Rizky28eka](https://github.com/Rizky28eka)
-* **Bilcode Team** - *Contributor*
 
 ---
 
-🚀 *Project ini dibangun dengan semangat untuk memajukan edukasi farmasi di Indonesia.*
+🚀 *This project was built with a passion for advancing pharmacy education.*
