@@ -1,24 +1,15 @@
-import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 
-const NotFound = () => {
-  const location = useLocation();
-
-  useEffect(() => {
-    console.error("404 Error: User attempted to access non-existent route:", location.pathname);
-  }, [location.pathname]);
-
+export default function NotFound() {
+  useEffect(() => { document.title = "Halaman tidak ditemukan | Manajemen Farmasi"; }, []);
   return (
-    <div className="flex min-h-screen items-center justify-center bg-muted">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">404</h1>
-        <p className="mb-4 text-xl text-muted-foreground">Oops! Page not found</p>
-        <a href="/" className="text-primary underline hover:text-primary/90">
-          Return to Home
-        </a>
+    <section className="section">
+      <div className="wrap prose">
+        <h1 className="page-title">Halaman tidak ditemukan</h1>
+        <p>Alamat yang Anda buka tidak ada atau sudah dipindahkan. Mulai dari beranda, atau pilih salah satu topik.</p>
+        <p><Link className="btn" to="/">Ke beranda</Link></p>
       </div>
-    </div>
+    </section>
   );
-};
-
-export default NotFound;
+}

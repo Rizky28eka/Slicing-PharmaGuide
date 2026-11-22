@@ -1,156 +1,88 @@
-# 💊 Pharmacy Management - Digital Reference
+<div align="right">
 
-A comprehensive digital reference platform that merges the managerial and clinical aspects of pharmacy. Specifically designed to help students and practitioners understand the pharmacy workflow in-depth, from planning to patient monitoring.
+**English** · [Bahasa Indonesia](README.id.md)
 
----
+</div>
 
-## 📌 1. Project Title & Description
+# Manajemen Farmasi: a study reference for pharmacy management
 
-* **Project Name**: Pharmacy Management Landing Page
-* **Description**: An educational website providing a comprehensive reference for pharmacy management, combining managerial theory with clinical practice in a pharmacy setting.
-* **Objective**: To provide an interactive and easy-to-understand learning resource for prospective pharmacists and pharmacy technicians regarding modern pharmacy management systems.
+![Manajemen Farmasi](docs/screenshots/home.jpg)
 
----
+[![React](https://img.shields.io/badge/React-18-61DAFB?style=flat-square&logo=react&logoColor=black)](https://react.dev)
+[![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)](https://www.typescriptlang.org)
+[![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white)](https://vite.dev)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow?style=flat-square)](LICENSE)
 
-## 📌 2. Overview / Background
+An Indonesian-language website that turns the textbook *Manajemen Farmasi* (Prasetyawan et al., 2024) into something you can explore: the nine-step workflow of a pharmacy, six topics with full write-ups, and calculators for the formulas students meet most often. It is built for pharmacy students and practitioners. Live site: [manajemen-farmacy.vercel.app](https://manajemen-farmacy.vercel.app).
 
-* **Background**: Managing a pharmacy involves many complex aspects, ranging from regulations and logistics to clinical services. Often, these materials are difficult to grasp without systematic flow visualization.
-* **Rationale**: This project was created to bridge the gap between academic theory and practical implementation in the field through a more visual and modern approach.
-* **Solution**: Features a concise information dashboard, structured enrichment modules, and an interactive visualization of the "9-Step Pharmacy Management Flow."
+## What is in it
 
----
+- **Nine-step workflow:** from drug selection to monitoring the patient. Pick a step to see what is done, why, and which topic covers it in depth.
+- **Six topics:** pharmacy services, inventory, forecasting, logistics, clinical pharmacy, and finance. Each has a summary, key points, the full write-up, and the key term or formula.
+- **Calculators:** economic order quantity (EOQ, with a live cost curve), break-even point (BEP), and inventory turnover (ITR). Everything is computed in the browser; nothing is sent anywhere.
+- **Eight enrichment modules** listed alongside the six topics.
 
-## 📌 3. Features
+The visual identity borrows from the pharmacy itself: the three circles of the drug-classification logo on packaging (green, blue, red), and a ledger-style "stock card" for the calculators.
 
-* **Statistics Dashboard**: Data summary (14 Course Chapters, 8 Practical Modules, 2024 Publication Year).
-* **Interactive Management Flow**: Visualization of the 9 core process steps in a pharmacy (Selection -> Planning -> ... -> Monitoring).
-* **Comprehensive Enrichment Materials**: 8 additional modules (Prescription Evaluation, Financial Analysis, Regulation, etc.).
-* **Responsive UI**: Premium design optimized for all screen sizes (Mobile, Tablet, Desktop).
-* **Smooth Navigation**: Anchor-based navigation for seamless transitions between sections.
+## Screenshots
 
----
+| Home | Workflow |
+|---|---|
+| ![Home](docs/screenshots/home.jpg) | ![Workflow](docs/screenshots/flow.jpg) |
 
-## 📌 4. Tech Stack
+| Topics | Calculators |
+|---|---|
+| ![Topics](docs/screenshots/topics.jpg) | ![Calculators](docs/screenshots/tools.jpg) |
 
-* **Frontend**: [React 18](https://reactjs.org/) + [TypeScript](https://www.typescriptlang.org/)
-* **Styling**: [Tailwind CSS](https://tailwindcss.com/)
-* **UI Components**: [Shadcn UI](https://ui.shadcn.com/) (Radix UI)
-* **Icons**: [Lucide React](https://lucide.dev/)
-* **Build Tool**: [Vite](https://vitejs.dev/)
-* **Package Manager**: [Bun](https://bun.sh/) / [NPM](https://www.npmjs.com/)
+| A topic page | Mobile |
+|---|---|
+| ![Topic](docs/screenshots/topic.jpg) | ![Mobile](docs/screenshots/mobile.jpg) |
 
----
+## Tech stack
 
-## 📌 5. System Architecture
+| Area | Technology |
+|---|---|
+| App | React 18, TypeScript, React Router |
+| Build | Vite |
+| Styling | Plain CSS with design tokens (no UI framework) |
+| Typography | Instrument Sans and Source Serif 4 |
+| Tests | Vitest (formulas) |
 
-* **Architecture**: Single Page Application (SPA).
-* **Structure**: Component-based Architecture separating `UI Components` (reusable) and `Site Components` (section-specific).
-* **Styling Pattern**: Utility-first CSS using Tailwind with CSS Variables integration for color themes.
+The runtime has three dependencies: `react`, `react-dom`, and `react-router-dom`.
 
----
+## Getting started
 
-## 📌 6. Installation Guide
-
-### Requirements
-
-* Node.js v18.x or later
-* Bun (recommended) or NPM
-
-### Step-by-step
-
-1. **Clone Repository**
-
-   ```bash
-   git clone https://github.com/Rizky28eka/ui-slicing-guru.git
-   ```
-
-2. **Install Dependencies**
-
-   ```bash
-   bun install
-   # or
-   npm install
-   ```
-
-3. **Setup Environment**
-
-   *(Optional: If there is a .env.example file, copy it to .env)*
-
-   ```bash
-   cp .env.example .env
-   ```
-
-4. **Run Project**
-
-   ```bash
-   bun dev
-   # or
-   npm run dev
-   ```
-
----
-
-## 📌 7. Usage
-
-* **Explore Materials**: Users can view key statistics in the Hero section.
-* **Study the Flow**: Scroll to the "Management Flow" section to see the professional workflow sequence in a pharmacy.
-* **Enrichment Modules**: Click on material cards in the "Additional Materials" section to view topic details.
-
----
-
-## 📌 8. API Documentation
-
-* *Currently, this project is frontend-only (static landing page). API integration is planned for the future roadmap.*
-
----
-
-## 📌 9. Folder Structure
-
-```text
-├── public/                # Static assets (images, icons)
-├── src/
-│   ├── components/
-│   │   ├── site/          # Section-specific components (Hero, About, etc.)
-│   │   └── ui/            # Reusable shadcn/ui components
-│   ├── pages/             # Main page layouts
-│   ├── hooks/             # Custom React hooks
-│   ├── lib/               # Utilities (utils.ts)
-│   └── index.css          # Global styles & tailwind directives
-├── tailwind.config.ts     # Tailwind configuration
-└── vite.config.ts         # Vite configuration
+```bash
+git clone https://github.com/Rizky28eka/Slicing-PharmaGuide.git
+cd Slicing-PharmaGuide
+npm install
+npm run dev
 ```
 
----
+Other scripts: `npm run build` · `npm run typecheck` · `npm run lint` · `npm test`
 
-## 📌 10. Roadmap / Future Development
+[`vercel.json`](vercel.json) rewrites unknown paths to `index.html`, so direct links such as `/layanan/farmasi-klinik` keep working after a refresh.
 
-* [ ] **Detailed Content**: Adding detail pages for each of the 14 chapters.
-* [ ] **Interactive Quiz**: Self-evaluation feature for each practical module.
-* [ ] **Dark Mode**: Support for dark theme for reading comfort.
-* [ ] **Backend Integration**: Integration with a CMS for dynamic content management.
+## Project structure
 
----
+```text
+src/
+├── components/   Header and footer, calculators, workflow explorer
+├── data/         Topics, workflow steps, enrichment modules
+├── lib/          Formulas (with tests), number formatting
+├── pages/        Home, topic page, not found
+└── index.css     Design tokens and styles
+```
 
-## 📌 11. Contributing
+## Content and credits
 
-1. Fork this Project.
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`).
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`).
-4. Push to the Branch (`git push origin feature/AmazingFeature`).
-5. Open a Pull Request.
+The texts summarise the book *Manajemen Farmasi*; its copyright belongs to the authors and publisher:
 
----
+Prasetyawan, F., Serdiani, FISQua, Arief, I., Anggraini, R., Sarifudin, B. A., Suhery, D., Pratama, M. W., Yuniar, C. R., Ihsan, M., Madiati, N., Mayasari, S., Hasanah, R., Andika, M., & Syavardie, Y. (2024). *Manajemen Farmasi*. PT Pena Muda Media.
 
-## 📌 12. License
+The website code is released under the [MIT License](LICENSE).
 
-Distributed under the **MIT License**. See `LICENSE` for more information.
+## Author
 
----
-
-## 📌 13. Author / Credits
-
-* **Rizky Eka** - *Lead Developer* - [@Rizky28eka](https://github.com/Rizky28eka)
-
----
-
-🚀 *This project was built with a passion for advancing pharmacy education.*
+**Rizky Eka Haryadi**  
+[GitHub](https://github.com/Rizky28eka) · [LinkedIn](https://www.linkedin.com/in/rizky28eka/) · [Portfolio](https://heyeka.vercel.app)
